@@ -10,6 +10,12 @@
 @import "partials/grid";
 @import "partials/header";
 
+// layout
+.header, .footer {
+    padding: 2em;
+    color: #666666;
+}
+
 // universal typography
 body {
   font-family: 'open_sansregular';
@@ -29,7 +35,6 @@ h1 {
 .menu {
     width: 100%;
     display: block;
-    padding: 2em;
 
     li {
         display: inline-block;

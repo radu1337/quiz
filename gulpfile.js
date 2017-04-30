@@ -7,13 +7,9 @@ var gulp =              require('gulp'),
     rename =            require('gulp-rename'),
     del =               require('del'),
     concat =            require('gulp-concat'),
-    runSequence =       require('run-sequence'),
     autoprefixer =      require('gulp-autoprefixer'),
     browserSync =       require('browser-sync').create(),
-    nunjucksRender =    require('gulp-nunjucks-render'),
-    data =              require('gulp-data'),
-    nunjucks =          require('nunjucks'),
-    env =               new nunjucks.Environment();
+    nunjucksRender =    require('gulp-nunjucks-render');
 
 
 var manageEnvironment = function(environment) {
@@ -42,7 +38,7 @@ gulp.task('nunjucks', function() {
 
 // concatenate and minify js
 gulp.task('js', function(){
-    return gulp.src(['source/js/jquery-3.0.0.js', 'source/js/frontend.js'])
+    return gulp.src(['source/js/jquery-3.0.0.js', 'source/js/quiz.js', 'source/js/frontend.js'])
         .pipe(concat('concat.js'))
         .on('error', onError)
         .pipe(gulp.dest('js'))

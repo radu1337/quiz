@@ -12,9 +12,29 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>
-                    Welcome to the Quiz!
-                </h1>
+                <div id='title'>
+                    <h1>
+                        Welcome to the Quiz!
+                    </h1>
+                </div>
+                <div id='quiz'>
+
+                </div>
+                <div class='button' id='next'>
+                    <a href='javascript:;'>
+                        Next
+                    </a>
+                </div>
+                <div class='button' id='prev'>
+                    <a href='javascript:;'>
+                        Prev
+                    </a>
+                </div>
+                <div class='button' id='start'>
+                    <a href='javascript:;'>
+                        Start Over
+                    </a>
+                </div>
             </div>
         </div>
     </div>

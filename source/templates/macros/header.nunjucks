@@ -1,9 +1,17 @@
 {% macro active(activePage='home') %}
-<ul class="menu" id="menu">
-    <li class="{%if activePage == 'home' %}active{% endif %}">
-        <a href="javascript:;">
-            Home
-        </a>
-    </li>
-</ul>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="menu" id="menu">
+                    <li class="{%if activePage == 'home' %}active{% endif %}">
+                        <a href="javascript:;">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 {% endmacro %}
