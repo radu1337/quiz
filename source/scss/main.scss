@@ -10,6 +10,7 @@
 @import "partials/grid";
 @import "partials/header";
 
+// universal typography
 body {
   font-family: 'open_sansregular';
   font-size: 16px;
@@ -23,6 +24,7 @@ h1 {
     color: #333;
 }
 
+// menu module
 .menu {
     width: 100%;
     display: block;
@@ -35,11 +37,14 @@ h1 {
             display: block;
             padding: 0.5em;
             color: #333;
+            text-decoration: none;
         }
 
         &:hover, &.active {
-            background-color: #333;
-            color: #fff;
+            a {
+                background-color: #333;
+                color: #fff;
+            }
         }
     }
 }
