@@ -12,6 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-2"></div>
+            {# begin quiz markup #}
             <div class="col-md-6 col-sm-10 quiz">
                 <div id='title'>
                     <h1>
@@ -39,6 +40,7 @@
                     </div>
                 </div>
             </div>
+            {# end quiz markup #}
             <div class="col-md-3 col-sm-2"></div>
         </div>
     </div>
