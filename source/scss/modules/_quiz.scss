@@ -1,0 +1,129 @@
+// quiz module
+.quiz {
+    .question-label {
+        margin: 0 0.5em 1em 0;
+        font-size: 1.5em;
+        display: inline-block;
+        color: #999;
+    }
+
+    .question-text {
+        margin: 0 0 1em 0;
+        font-size: 1.5em;
+        display: inline-block;
+        color: #555;
+    }
+
+    ul {
+        li {
+            label {
+                display: block;
+                padding: 0.3em;
+                color: #555;
+                line-height: 1.8em;
+                font-weight: bold;
+                background-color: #f4f4f4;
+                border: 1px solid rgba(0,0,0,0.1);
+                cursor: pointer;
+
+                input[type="radio"] {
+                    margin-right: 0.5em;
+                    outline: none;
+                }
+
+                &:hover {
+                    color: #222;
+                    background-color: #fffab6;
+                }
+
+                &.active {
+                    color: #222;
+                    background-color: #cfe3ff;
+                }
+            }
+
+            &.without-image {
+                display: block;
+                width: 100%;
+                text-align: left;
+
+                label {
+                    margin: 0 0 0.3em;
+                }
+            }
+
+            &.with-image {
+                display: inline-block;
+                width: 47%;
+                text-align: left;
+
+                label {
+                    margin: 0 3% 1.1em;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                @media only screen and (min-width : 768px) {
+                    width: 30%;
+
+                    label {
+                        margin: 0 3% 0.4em;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .controls {
+        font-size: 0;
+    }
+
+    .button {
+        display: inline-block;
+        margin-bottom: 0.3em;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0.3em;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @media only screen and (min-width : 768px) {
+            font-size: 16px;
+        }
+
+        a {
+            width: 100%;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &.prev {
+            width: 49%;
+            margin-right: 1%;
+            background-color: #37474f;
+        }
+
+        &.next {
+            width: 49%;
+            margin-left: 1%;
+            background-color: #0091ea;
+        }
+
+        &.start {
+            width: 100%;
+            margin-top: 1%;
+            background-color: #c62828;
+        }
+    }
+}

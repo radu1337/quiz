@@ -4,11 +4,11 @@
 @import "mixins/grid_framework";
 @import "mixins/grid_mixins";
 @import "modules/fonts";
+@import "modules/quiz";
 
 // Partials
 @import "partials/reset";
 @import "partials/grid";
-@import "partials/header";
 
 // layout
 .header, .footer {
@@ -20,7 +20,8 @@
 body {
   font-family: 'open_sansregular';
   font-size: 16px;
-  line-height: 1.3em;
+  line-height: 1.6em;
+  text-align: center;
 }
 
 h1 {
@@ -29,6 +30,7 @@ h1 {
     font-size: 2em;
     line-height: 1.4em;
     color: #333;
+    margin-bottom: 1em;
 }
 
 // menu module

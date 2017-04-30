@@ -11,31 +11,35 @@
     <!-- end header -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3 col-sm-2"></div>
+            <div class="col-md-6 col-sm-10 quiz">
                 <div id='title'>
                     <h1>
-                        Welcome to the Quiz!
+                        What weird animal are you?
                     </h1>
                 </div>
                 <div id='quiz'>
 
                 </div>
-                <div class='button' id='next'>
-                    <a href='javascript:;'>
-                        Next
-                    </a>
-                </div>
-                <div class='button' id='prev'>
-                    <a href='javascript:;'>
-                        Prev
-                    </a>
-                </div>
-                <div class='button' id='start'>
-                    <a href='javascript:;'>
-                        Start Over
-                    </a>
+                <div class="controls">
+                    <div class='button prev' id='prev'>
+                        <a href='javascript:;'>
+                            Prev
+                        </a>
+                    </div>
+                    <div class='button next' id='next'>
+                        <a href='javascript:;'>
+                            Next
+                        </a>
+                    </div>
+                    <div class='button start' id='start'>
+                        <a href='javascript:;'>
+                            Start Over
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-3 col-sm-2"></div>
         </div>
     </div>
     <!-- footer -->

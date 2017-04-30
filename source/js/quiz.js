@@ -1,6 +1,7 @@
+// quiz module
 (function() {
     var questions = [{
-        question: "What ability do you have?",
+        question: "What special ability do you have?",
         choices: [1, 2, 3, 4, 5],
         choicesLabels: ["Flying", "Swimming", "Digging", "Running", "Climbing"]
     }, {
@@ -16,7 +17,7 @@
 
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
-    var selectionsLabels = [];
+    var selectionsLabels = []; //Array containing user choice labels
     var quiz = $('#quiz'); //Quiz div object
 
     // Display initial question
@@ -67,13 +68,7 @@
         $('#start').hide();
     });
 
-    // Animates buttons on hover
-    $('.button').on('mouseenter', function() {
-        $(this).addClass('active');
-    });
-    $('.button').on('mouseleave', function() {
-        $(this).removeClass('active');
-    });
+
 
     // Creates and returns the div that contains the questions and
     // the answer selections
@@ -82,10 +77,10 @@
             id: 'question'
         });
 
-        var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+        var header = $('<span class="question-label">Question ' + (index + 1) + ':</span>');
         qElement.append(header);
 
-        var question = $('<p>').append(questions[index].question);
+        var question = $('<span class="question-text">').append(questions[index].question);
         qElement.append(question);
 
         var radioButtons = createRadios(index);
@@ -94,28 +89,40 @@
         return qElement;
     }
 
+    // assign click event for options
+    $('.quiz').delegate('label','click',function() {
+        $('.quiz ul li label').removeClass('active');
+        $(this).addClass('active');
+    });
+
     // Creates a list of the answer choices as radio inputs
     function createRadios(index) {
-
-
         var radioList = $('<ul>');
+        var holder;
         var item;
         var input = '';
         var image = '';
         for (var i = 0; i < questions[index].choices.length; i++) {
-            item = $('<li>');
+            if (questions[index].choicesImages) {
+                holder = $('<li class="with-image">');
+            } else {
+                holder = $('<li class="without-image">');
+            }
+
+            item = $('<label>');
             input = '<input type="radio" name="answer" value=' + questions[index].choices[i] + ' data-optionLabel="' + questions[index].choicesLabels[i] + '" />';
             input += questions[index].choicesLabels[i];
 
             if (questions[index].choicesImages) {
                 image = '<img src="images/content/' + questions[index].choicesImages[i] + '" alt="'+ questions[index].choices[i] +'" />';
-
                 item.append(image);
             }
 
             item.append(input);
-            radioList.append(item);
+            holder.append(item);
+            radioList.append(holder);
         }
+
         return radioList;
     }
 
@@ -157,7 +164,7 @@
         });
     }
 
-    // Computes score and returns a paragraph element to be displayed
+    // Combines choices and returns a paragraph element to be displayed
     function displayScore() {
         var score = $('<p>', {
             id: 'question'
