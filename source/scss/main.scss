@@ -1,0 +1,45 @@
+// Variables and Mixins
+@import "modules/bootstrap_grid_variables";
+@import "mixins/clearfix";
+@import "mixins/grid_framework";
+@import "mixins/grid_mixins";
+@import "modules/fonts";
+
+// Partials
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/header";
+
+body {
+  font-family: 'open_sansregular';
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+h1 {
+    font-family: 'open_sansregular';
+    font-weight: regular;
+    font-size: 2em;
+    color: #333;
+}
+
+.menu {
+    width: 100%;
+    display: block;
+    padding: 2em;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: block;
+            padding: 0.5em;
+            color: #333;
+        }
+
+        &:hover, &.active {
+            background-color: #333;
+            color: #fff;
+        }
+    }
+}
